@@ -1,7 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Kanit:wght@300&family=Space+Grotesk:wght@500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body{
   background-color: #242424;
+  font-family: 'Kanit', sans-serif;
+}
+
+@media screen and (max-width : 395px) {
+  .resp{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media (min-width : 395px) and (max-width : 750px){
+  .resp{
+    grid-template-columns: repeat(2 , minmax(0, 1fr));
+  }
+}
+
+@media (min-width : 750px) and (max-width : 950px){
+  .resp{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+/* 
+@media (min-width : 321px) and (max-width : 750px){
+  .resp{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+} */
+
+
+.box img{
+  max-width: 100%;
+}
+
+.box img:hover{
+  transform: scale(1.02);
+
+}
+
+.product-card{
+  box-shadow: 0.8px 2px 20px 4px #171717;
+  background-color: #242424;
+}
+.product-card:hover{
+  transform: scale(1.04);
+  transition: all 0.3s ease-in-out ;
+  /* cursor: pointer; */
 }
